@@ -1,8 +1,10 @@
 package com.androidstudy.lsvhome.mycalcv2_0;
 
+import android.graphics.drawable.ClipDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,17 +54,23 @@ public class MainActivity extends AppCompatActivity {
         bdel.setOnClickListener(new MyListener(calcStr,"\b"));
 
         Button bClear=(Button)findViewById(R.id.buttonC);
+        ClipDrawable drawable=(ClipDrawable)bClear.getBackground();
+        drawable.setLevel(5000);
+
         bClear.setOnClickListener(new MyListener(calcStr,"c"));
 
 
         Button bPlus=(Button)findViewById(R.id.buttonPlus);
         bPlus.setOnClickListener(new MyListener(calcStr,"+"));
+
         Button bMinus=(Button)findViewById(R.id.buttonMinus);
         bMinus.setOnClickListener(new MyListener(calcStr,"-"));
         Button bMultiply=(Button)findViewById(R.id.buttonMultiply);
         bMultiply.setOnClickListener(new MyListener(calcStr,"*"));
+
         Button bDivide=(Button)findViewById(R.id.buttonDivide);
         bDivide.setOnClickListener(new MyListener(calcStr,"/"));
+
         Button bPth1=(Button)findViewById(R.id.buttonPth1);
         bPth1.setOnClickListener(new MyListener(calcStr,"("));
         Button bPth2=(Button)findViewById(R.id.buttonPth2);

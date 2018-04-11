@@ -19,15 +19,16 @@ public class MyListener implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-        if (value.equals("C")) {
+        if (v.getId()==R.id.buttonC) {
             textView.setText("");
             return;
         }
-        if (value.equals("\b")) {
-            textView.setText(textView.getText().subSequence(0, textView.getText().length() - 1));
+        if (v.getId()==R.id.buttonDel) {
+            CharSequence cs=textView.getText();
+            textView.setText(cs.subSequence(0, cs.length() - 1));
             return;
         }
-        if (value.equals("=")){
+        if (v.getId()==R.id.buttonEquals){
             calcResult();
             return;
         }
