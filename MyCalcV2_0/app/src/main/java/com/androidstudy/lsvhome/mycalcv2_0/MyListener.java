@@ -1,6 +1,7 @@
 package com.androidstudy.lsvhome.mycalcv2_0;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MyListener implements View.OnClickListener {
@@ -12,12 +13,12 @@ public class MyListener implements View.OnClickListener {
         this.textView = textView;
         this.value = value;
 
-
     }
 
 
     @Override
     public void onClick(View v) {
+
 
         if (v.getId()==R.id.buttonC) {
             textView.setText("");
@@ -32,6 +33,8 @@ public class MyListener implements View.OnClickListener {
             calcResult();
             return;
         }
+        /*CharSequence cs=((Button)v).getText();//новое
+        textView.append(cs);//новое*/
         textView.append(value);
 
     }

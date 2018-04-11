@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="simple_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="simple_button_round" parent="simple_button">
+        <item name="android:background">@drawable/button_circle</item>
+    </style>
+
+
+    <style name="simple_button_rectangle" parent="simple_button">
+        <item name="android:background">@drawable/button_rectangle</item>
+    </style>
+
+    <style name="simple_button_triangle" parent="simple_button">
+        <item name="android:background">@drawable/button_triangle</item>
+    </style>
+
+    <style name="simple_button_double_rectangle" parent="simple_button_rectangle">
+        <item name="android:layout_weight">2</item>
+    </style>
+
+
 </resources>
