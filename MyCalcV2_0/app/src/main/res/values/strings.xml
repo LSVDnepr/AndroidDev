@@ -24,6 +24,8 @@
     <string name="button_del">Del</string>
     <string name="button_equals">=</string>
     <string name="calc_area">0</string>
+    <string name="hint">Calculation result will be here</string>
+    <string name="button_back">Back</string>
 
 
 </resources>

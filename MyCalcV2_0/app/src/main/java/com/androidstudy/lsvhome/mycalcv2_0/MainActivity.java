@@ -1,6 +1,7 @@
 package com.androidstudy.lsvhome.mycalcv2_0;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +12,11 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
-    TextView calcStr;//=(TextView)findViewById(R.id.calcArea);//есть ли риски такого присвоения в качестве переменной класса?
+    private TextView calcStr;//=(TextView)findViewById(R.id.calcArea);//есть ли риски такого присвоения в качестве переменной класса?
     public String memory = "";
+    private MainActivity mainActivity=this;
+
+
 
 
     @Override
@@ -21,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        calcStr = (TextView) findViewById(R.id.calcArea);
+       calcStr = (TextView) findViewById(R.id.calcArea);
+
+
+
+
 
         NumPressedListener numListener = new NumPressedListener(calcStr);
         OperatorPressedListener operatorPressed = new OperatorPressedListener(calcStr);
@@ -132,6 +140,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 calcStr.setText(calcResult(calcStr.getText().toString()));
+
+                //new
+                Intent intent = new Intent(mainActivity,SecondActivity.class);
+                intent.putExtra("calcResults", calcStr.getText().toString());
+                startActivityForResult(intent, 0);
+
             }
         });
 
@@ -195,6 +209,23 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             return "error";
         }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {
+            return;
+        }
+
+        String calcResults = data.getStringExtra("calcResults");
+        if (calcResults.length()==0){
+            calcStr.setText("0");
+            return;
+        }
+        calcStr.setText(calcResults);
+
+
+
     }
 
 }

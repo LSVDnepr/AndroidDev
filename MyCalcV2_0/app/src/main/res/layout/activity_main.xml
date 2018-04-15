@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".MainActivity">
+    <!--android:background="@color/colorDarkGrey"-->
 
     <TextView
         android:id="@+id/calcArea"
@@ -13,6 +15,7 @@
         android:layout_height="0dp"
         android:layout_weight="20"
         android:gravity="fill_vertical|end"
+        android:background="@color/colorWhite"
         android:text="@string/calc_area"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,9 +40,9 @@
                 android:text="@string/button_mc" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button7"
                 style="@style/simple_button_round"
-                android:text="@string/button_one" />
+                android:text="@string/button_seven" />
 
             <Button
                 android:id="@+id/button4"
@@ -48,9 +51,9 @@
 
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/button1"
                 style="@style/simple_button_round"
-                android:text="@string/button_seven" />
+                android:text="@string/button_one" />
 
             <Button
                 android:id="@+id/buttonC"
@@ -73,10 +76,9 @@
 
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button8"
                 style="@style/simple_button_round"
-                android:text="@string/button_two" />
-
+                android:text="@string/button_eight" />
 
             <Button
                 android:id="@+id/button5"
@@ -84,9 +86,9 @@
                 android:text="@string/button_five" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/button2"
                 style="@style/simple_button_round"
-                android:text="@string/button_eight" />
+                android:text="@string/button_two" />
 
             <Button
                 android:id="@+id/button0"
@@ -106,9 +108,9 @@
                 android:text="@string/button_mr" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button9"
                 style="@style/simple_button_round"
-                android:text="@string/button_three" />
+                android:text="@string/button_nine" />
 
             <Button
                 android:id="@+id/button6"
@@ -116,9 +118,9 @@
                 android:text="@string/button_six" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/button3"
                 style="@style/simple_button_round"
-                android:text="@string/button_nine" />
+                android:text="@string/button_three" />
 
             <Button
                 android:id="@+id/buttonDot"
