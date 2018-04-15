@@ -10,10 +10,10 @@
     <TextView
         android:id="@+id/calcArea"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:layout_weight="30"
-        android:text=""
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="fill_vertical|end"
+        android:text="@string/calc_area"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,8 +21,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="70"
+        android:layout_height="0dp"
+        android:layout_weight="80"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -121,9 +121,9 @@
                 android:text="@string/button_nine" />
 
             <Button
-                android:id="@+id/buttonComma"
+                android:id="@+id/buttonDot"
                 style="@style/simple_button_rectangle"
-                android:text="@string/button_comma" />
+                android:text="@string/button_dot" />
         </LinearLayout>
 
         <LinearLayout

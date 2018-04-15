@@ -14,7 +14,7 @@
     <string name="button_nine">9</string>
     <string name="button_zero">0</string>
     <string name="button_clear">C</string>
-    <string name="button_comma">,</string>
+    <string name="button_dot">.</string>
     <string name="button_plus">+</string>
     <string name="button_minus">-</string>
     <string name="button_multiply">*</string>
@@ -23,6 +23,7 @@
     <string name="button_pth2">)</string>
     <string name="button_del">Del</string>
     <string name="button_equals">=</string>
+    <string name="calc_area">0</string>
 
 
 </resources>

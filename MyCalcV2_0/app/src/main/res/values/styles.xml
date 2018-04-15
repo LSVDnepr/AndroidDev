@@ -25,7 +25,9 @@
     </style>
 
     <style name="simple_button_triangle" parent="simple_button">
-        <item name="android:background">@drawable/button_triangle</item>
+       <item name="android:background">@drawable/button_triangle2</item>
+       <!-- <item name="android:background">@drawable/button_triangle</item>-->
+       <!-- <item name="android:layout_gravity">center_vertical</item>-->
     </style>
 
     <style name="simple_button_double_rectangle" parent="simple_button_rectangle">

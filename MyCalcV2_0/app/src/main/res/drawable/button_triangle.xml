@@ -4,14 +4,15 @@
             <rotate
                 android:fromDegrees="45"
                 android:toDegrees="45"
-                android:pivotX="-25%"
-                android:pivotY="50%"  >
+                android:pivotX="-40%"
+                android:pivotY="75%"  >
                 <shape
                     android:shape="rectangle" >
                     <corners
                         android:radius="5dp"
                         />
-                    <stroke android:color="@android:color/transparent" android:width="10dp"/>
+                    <stroke android:color="@android:color/transparent"
+                        android:width="-25dp"/>
                     <gradient
                         android:angle="45"
                         android:centerX="0.5"
